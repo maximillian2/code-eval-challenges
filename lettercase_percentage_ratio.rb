@@ -9,5 +9,5 @@ File.open(ARGV[0]).each_line do |line|
     total += 1
   end
 
-  puts "lowercase: #{((downcase.to_f / total.to_f) * 100).round(2)} uppercase: #{((upcase.to_f / total.to_f) * 100).round(2)}"
+  puts "lowercase: #{ '%.2f' % ((downcase.to_f / total.to_f) * 100) } uppercase: #{ '%.2f' % ((upcase.to_f / total.to_f) * 100) }"
 end
